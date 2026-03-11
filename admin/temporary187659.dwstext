@@ -1,0 +1,10 @@
+<?php
+    $filename = '/opt/lampp/htdocs/ez/python/database_bw/representations_facenet512.pkl';
+if (file_exists($filename)) {
+    // If the file exists, return 'generated'
+    echo 'generated';
+} else {
+    // If the file doesn't exist, return 'not generated'
+    echo 'not generated';
+}
+?>
