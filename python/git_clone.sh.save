@@ -1,7 +1,7 @@
 [AB#!/bin/bash
 
 # Step 1: Clone the repository
-git clone -b master https://@github.com/ezwitnessmlr/brevera_backup.git
+git clone -b master https://git add .git add .@github.com/ezwitnessmlr/brevera_backup.git
 
 # Step 2: Navigate to the directory with the zip files
 cd /opt/lampp/htdocs/ez/python/brevera_backup/cam2/
