@@ -1,26 +1,22 @@
-[AB#!/bin/bash
+#!/bin/bash
 
 # Step 1: Clone the repository
-git clone -b master https://git add .git add .@github.com/ezwitnessmlr/brevera_backup.git
+git clone -b master https://github.com//pallavipalechar/EZWitness/brevera_backup.git
 
 # Step 2: Navigate to the directory with the zip files
-cd /opt/lampp/htdocs/ez/python/brevera_backup/cam2/
+cd brevera_backup/cam2/ || exit
 
 # Step 3: Find the latest zip file starting with 'database_bw_'
-latest_zip=$(find . -name 'database_bw_*.zip' -printf '%T+ %p\n' | sort -r | head -n 1 | awk '{print $2}')
+latest_zip=$(ls -t database_bw_*.zip | head -n 1)
+
 echo "The latest zip file is: $latest_zip"
 
 # Step 4: Unzip the latest zip file
 unzip -o "$latest_zip" -d /opt/lampp/htdocs/ez/python/
 
-# Step 5: Set full read and write permissions to the extracted files
+# Step 5: Set permissions to the extracted files
 chmod -R 777 /opt/lampp/htdocs/ez/python/database_bw/
 
-# Step 6: Clean up by removing the cloned repository (if not needed)
-rm -rf /opt/lampp/htdocs/ez/python/brevera_backup
-X
-
-
-
-
-
+# Step 6: Remove the cloned repository
+cd ../../
+rm -rf brevera_backup
